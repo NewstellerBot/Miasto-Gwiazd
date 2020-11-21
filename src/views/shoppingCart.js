@@ -27,7 +27,7 @@ export default function ShoppingCart() {
         product_price: '69',
         total: '207',
         product_img: 'jetson.jpg',
-        company_name: 'Samochodzy',
+        company_name: 'zipaa',
       },
     ],
     [
@@ -38,7 +38,7 @@ export default function ShoppingCart() {
         product_price: '10',
         total: '50',
         product_img: 'wibrator.png',
-        company_name: 'zipaa',
+        company_name: 'Samochodzy',
       },
       {
         product_id: '2',
