@@ -1,0 +1,122 @@
+body {
+  background-color: white;
+}
+
+.cartElement {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+.cartElement.dot {
+  width: 20px;
+}
+
+.cartElement.img {
+  object-fit: fill;
+  height: 100%;
+  width: 20%;
+}
+
+.cartElement.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 60%;
+  margin-top: -2%;
+  /* margin-left: -10%; */
+}
+
+.cartElement.desc h1 {
+  font-size: 30px;
+  color: black;
+}
+.cartElement.quant h1 {
+  font-size: 30px;
+  color: black;
+  margin-left: 50px;
+  font-weight: normal;
+}
+
+.cartElement.quant {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.cart.lane {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cart.itemsWrapper {
+  margin-top: 70px;
+  width: 100%;
+  /* margin-right: 10%; */
+}
+
+.cart.element {
+  margin-right: 15%;
+  width: 80%;
+}
+.cart.header {
+  color: black;
+  font-size: 40px;
+  margin: 10px;
+}
+
+.cart.payment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+.cart.payment select {
+  width: 300px;
+  height: 30px;
+}
+.cart.buyButton {
+  background-color: #ff8a1e;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Verdana;
+  font-size: 20px;
+  padding: 16px 52px;
+  text-decoration: none;
+  text-shadow: 0px 2px 0px #39802e;
+  transition: all 0.1s ease-in;
+  width: 300px;
+  text-align: center;
+  margin-right: 5%;
+}
+.cart.buyButton:hover {
+  transform: scale(1.001);
+  background-color: #ff8a10;
+  -moz-box-shadow: 0px 0px 3px 0px #383838;
+  -webkit-box-shadow: 0px 0px 3px 0px #383838;
+  box-shadow: 0px 0px 3px 0px #383838;
+}
+.cart.buyButton:active {
+  position: relative;
+  top: 1px;
+}

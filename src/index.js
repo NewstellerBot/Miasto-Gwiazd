@@ -9,21 +9,11 @@ import reportWebVitals from './reportWebVitals'
 import './assets/css/main.css'
 import './assets/css/reset.css'
 
+import ShoppingCart from './views/shoppingCart'
+
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Switch>
-        <Route exact path='/'>
-          <App />
-        </Route>
-        <Route path='/search/:query'>
-          <Search />
-        </Route>
-        <Route path='/product/:id'>
-          <Search />
-        </Route>
-      </Switch>
-    </Router>
+    <ShoppingCart />
   </React.StrictMode>,
   document.getElementById('root')
 )
@@ -32,4 +22,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // todo axios
-reportWebVitals(console.log)
+//reportWebVitals(console.log)
