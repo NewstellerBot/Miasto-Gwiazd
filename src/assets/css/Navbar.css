@@ -1,0 +1,95 @@
+.navbar {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: white;
+  border-bottom: black 1px solid;
+}
+
+.navbar-home {
+  flex: 0.2;
+  display: flex;
+  align-items: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.navbar-home img:hover {
+  cursor: pointer;
+}
+
+.navbar-search {
+  flex: 0.4;
+  display: flex;
+}
+
+.navbar-engine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  float: left;
+  width: 100%;
+  height: 30px;
+  border: black solid 1px;
+  border-radius: 10px;
+}
+
+.navbar-engine h3 {
+  padding-left: 20px;
+  font-size: 1rem;
+  color: black;
+  opacity: 0.3;
+}
+
+.navbar-engine .lni {
+  padding: 10px;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.navbar-navigation {
+  flex: 0.4;
+  display: flex;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-navigation .navbar-item:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  color: gray;
+}
+
+.navbar-navigation h2 {
+  font-size: 1.3rem;
+}
+
+.navbar img {
+  width: 15rem;
+  height: auto;
+}
+
+.navbar-login {
+  align-items: center;
+  display: flex;
+}
+
+.navbar-wishlist {
+  align-items: center;
+  display: flex;
+}
+
+.navbar-cart {
+  align-items: center;
+  display: flex;
+}
+
+.navbar-navigation .lni {
+  padding: 10px;
+  font-size: 2rem;
+}
