@@ -1,0 +1,32 @@
+.tile {
+  cursor: pointer;
+
+  height: 30vh;
+  width: 20vw;
+  padding: 10px 20px 10px 20px;
+  margin: 0 1em 0 1em;
+  border-radius: 1.4em;
+  background-color: #fff;
+  box-shadow: 0 0 1em #b0b0b0;
+  transition: 0.4s;
+}
+
+.tile:hover {
+  transform: scale(1.04);
+}
+
+.tile__title {
+  text-align: center;
+  font-size: 1.8em;
+  font-style: bold;
+  padding-top: 0.4em;
+}
+
+.tile__text {
+  padding-top: 0.5em;
+  font-size: 1.3em;
+}
+
+ul {
+  list-style-type: circle;
+}
