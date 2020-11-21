@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import '../assets/css/Navbar.css'
-import axios from 'axios'
-import { Link, useHistory } from 'react-router-dom'
-import homeLogo from '../assets/img/home-logo.png'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import LineIcon from 'react-lineicons'
+
+import homeLogo from '../assets/img/home-logo.png'
+
+import '../assets/css/Navbar.css'
 
 function Navbar() {
   return (

@@ -1,60 +1,33 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import '../assets/css/Searchbar.css'
-import searchIcon from '../assets/svg/search.svg'
-import axios from 'axios'
 
-function Searchbar() {
-  const [search, doSearch] = useState('')
-  const [autocomplete, changeAutocomplete] = useState('')
+export default function SearchBar(props) {
+  const [search, setSearch] = useState('')
 
-  const onChange = event => {
-    // changeAutocomplete(event.target.value)
-    // getAutoComplete()
-    console.log(search.replace(search, autocomplete))
-  }
-
-  var getAutoComplete = () => {
-    axios
-      .get(`/searchAC?data=${search}`)
-      .then(res => {
-        changeAutocomplete(res)
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }
+  const history = useHistory()
 
   return (
-    <div>
-      <form role='searchbar' className='searchbar'>
-        <label htmlFor='search' className='searchbar'>
-          Search for anything...
-        </label>
+    <div className='searchbar-container'>
+      <div className='searchbar'>
         <input
-          id='search'
-          type='searchbar'
+          className='searchbar-input'
           autoFocus
-          placeholder='Search...'
-          onChange={onChange}
+          placeholder='Wyszukaj...'
+          onChange={e => setSearch(e.target.value)}
+          onKeyDown={e => {
+            if (e.key === 'Enter') {
+              history.push(`/search/${search}`)
+            }
+          }}
           autoComplete='off'
-          className='searchbar'
         />
-        <input
-          id='autocomplete'
-          type='searchbar'
-          placeholder={autocomplete}
-          autoFocus
-          autoComplete='off'
-          className='searchbar'
-        />
-        <button type='submit' className='searchbar'>
-          <img className='searchbar' style={{ height: '50%', marginTop: '10%' }} src={searchIcon} />
+        <button onClick={() => history.push(`/search/${search}`)}>
+          <FontAwesomeIcon icon='chevron-right' />
         </button>
-      </form>
+      </div>
     </div>
   )
 }
-
-export default Searchbar
-
-//TODO: Ikonka "wyszukaj" się nie wyświetla

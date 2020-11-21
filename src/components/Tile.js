@@ -1,7 +1,7 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 import '../assets/css/Tile.css'
-import { useHistory } from 'react-router-dom'
 
 export default function Tile(props) {
   let history = useHistory()

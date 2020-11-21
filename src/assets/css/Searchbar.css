@@ -9,86 +9,57 @@
   --btn-width: 6rem;
   --bez: cubic-bezier(0, 0, 0.43, 1.49);
 }
-.searchbar > *,
-.searchbar > *::before,
-.searchbar > *::after {
-  box-sizing: inherit;
+
+.searchbar-container {
+  position: absolute;
+  display: grid;
+  top: 50.5vh;
+  width: 100%;
+  z-index: 1000;
+  justify-content: center;
 }
 
-.searchbar > form[role='searchbar'] {
-  position: relative;
-  width: 50rem;
-  min-height: 50px;
-  /* background: var(--color-brand); */
-  border-radius: var(--rad);
-  /* width: 100%; */
-  background: var(--color-light);
-  padding: 0 1.6rem;
-  /* border-radius: var(--rad); */
-  appearance: none;
-  transition: all var(--dur) var(--bez);
-  transition-property: width border-radius;
-  z-index: 1;
-  /* position: relative; */
+.searchbar {
+  background-color: #fff;
+  height: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 5rem;
+  width: 50vw;
+  min-width: 480px;
+  border-radius: 1rem;
+  padding-left: 1rem;
 }
-.searchbar > input[role='searchbar'],
-.searchbar > button[role='searchbar'] {
-  height: var(--height);
-  font-family: var(--font-fam);
+
+.searchbar input,
+.searchbar button {
   border: 0;
-  color: var(--color-dark);
-  font-size: 1.8rem;
-  transition: all 0.4s ease-in-out;
-  /* transition-property: width border-radius; */
+  font-size: 2rem;
 }
-.searchbar > input[type='searchbar'] {
-  /* width: 100%; */
-  position: relative;
-  z-index: 2;
-  margin: 0.1rem;
+
+.searchbar input {
+  height: 3rem;
   outline: none;
   background-color: transparent;
-  position: absolute;
-  left: 3%;
-  top: 0;
+  position: relative;
+  bottom: 2px;
+  margin: 0.5rem 0 0 0;
 }
-.searchbar > [type='searchbar']::-webkit-search-cancel-button,
-.searchbar > [type='searchbar']::-webkit-search-decoration {
-  -webkit-appearance: none;
-  appearance: none;
-}
-.searchbar > button {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: var(--btn-width);
+
+.searchbar button {
   font-weight: bold;
-  background: var(--color-brand);
-  border-radius: 0 var(--rad) var(--rad) 0;
+  background: #57bd84;
   z-index: 3;
+  border-radius: 0 1rem 1rem 0;
+  color: #ffffff;
+  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
 }
-.searchbar > input:focus {
-  border-radius: var(--rad) 0 0 var(--rad);
-  /* width: calc(100% - var(--btn-width)); */
-}
-.searchbar > input:not(:focus) ~ button {
-  opacity: 0;
-  width: 0;
-}
-.searchbar > input:focus ~ button {
-  opacity: 1;
-  width: var(--btn-width);
-}
-.searchbar > label {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-.searchbar > #autocomplete {
+
+.searchbar .searchbar-autocomplete {
   z-index: 0;
+}
+
+.searchbar button svg {
+  position: relative;
+  left: 10px;
 }

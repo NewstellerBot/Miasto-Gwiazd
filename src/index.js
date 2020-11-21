@@ -1,12 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 import { App, Home, Login, Search } from './views'
 import reportWebVitals from './reportWebVitals'
 
 import './assets/css/main.css'
 import './assets/css/reset.css'
+
+library.add(faChevronRight)
+console.log(library)
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,9 +27,6 @@ ReactDOM.render(
           <Login />
         </Route>
         <Route path='/search/:query'>
-          <Search />
-        </Route>
-        <Route path='/product/:id'>
           <Search />
         </Route>
       </Switch>
