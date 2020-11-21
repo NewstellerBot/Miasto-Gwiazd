@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import { App, Search } from './views'
-
+import { App, Home, Login, Search } from './views'
 import reportWebVitals from './reportWebVitals'
 
 import './assets/css/main.css'
@@ -15,6 +14,12 @@ ReactDOM.render(
       <Switch>
         <Route exact path='/'>
           <App />
+        </Route>
+        <Route exact path='/home'>
+          <Home />
+        </Route>
+        <Route exact path='/login'>
+          <Login />
         </Route>
         <Route path='/search/:query'>
           <Search />

@@ -28,7 +28,7 @@
   justify-content: space-between;
   transition: all 0.2s ease-in-out;
   width: 100%;
-  height: 25%;
+  height: 30%;
   padding: 7px;
   border: black solid 1px;
   border-radius: 100px;
@@ -96,14 +96,16 @@
   align-items: center;
 }
 
+.navbar-item {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+}
+
 .navbar-navigation .navbar-item:hover {
   cursor: pointer;
   opacity: 0.9;
   color: gray;
-}
-
-.navbar-navigation h2 {
-  font-size: 1.3rem;
 }
 
 .navbar img {
