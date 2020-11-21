@@ -6,7 +6,7 @@ import '../assets/css/SearchResult.css'
 export default function SearchResult(props) {
   return (
     <div className='search-result'>
-      <img className='result-image' src={props.image} />
+      <img className='result-image' src={props.image} alt='' />
       <div className='result-data'>
         <div className='result-name'>{props.name}</div>
         <div className='result-price'>{props.price / 100}</div>
