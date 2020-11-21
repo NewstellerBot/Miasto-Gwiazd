@@ -7,7 +7,7 @@ node_modules
 
 # testing
 /coverage
-/client/index.js
+/src/index.js
 
 # production
 /build
