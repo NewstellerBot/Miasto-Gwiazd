@@ -11,12 +11,12 @@ export default function CartElement(props) {
       <img src={Dot} className='cartElement dot'></img>
       <img className='cartElement img' src={kuflowe}></img>
       <div className='cartElement desc'>
-        <h1>{props.data.name}</h1>
-        <p>{props.data.desc}</p>
+        <h1>{props.data.product_name}</h1>
+        <p>{props.data.company_name}</p>
       </div>
       <div className='cartElement quant'>
         <h1>{props.data.quantity} szt.</h1>
-        <h1>{props.data.price} zł</h1>
+        <h1>{props.data.product_price} zł</h1>
       </div>
     </div>
   )

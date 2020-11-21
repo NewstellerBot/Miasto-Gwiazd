@@ -2,29 +2,59 @@ import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import CartElement from '../components/ShoppingCartElement'
+
 import '../assets/css/ShoppingCart.css'
+import CartFromOneSeller from '../components/ShoppingCartFromOneSeller'
 
 export default function ShoppingCart() {
-  const [cartListDyn, setCartList] = useState()
+  const [fullCart, setFullCart] = useState()
 
-  var cartList = [
-    { name: 'Kaktus', desc: 'opis opis opis opis', price: '10', quantity: '1', img: 'gibi.png' },
-    { name: 'Zioła', desc: 'opis opis opis opis', price: '42', quantity: '3', img: 'jetson.jpg' },
+  var cartLists = [
+    [
+      {
+        product_id: '1',
+        product_name: 'Piwo',
+        quantity: '5',
+        product_price: '10',
+        total: '50',
+        product_img: 'wibrator.png',
+        company_name: 'zipaa',
+      },
+      {
+        product_id: '2',
+        product_name: 'Ferarri',
+        quantity: '3',
+        product_price: '69',
+        total: '207',
+        product_img: 'jetson.jpg',
+        company_name: 'Samochodzy',
+      },
+    ],
+    [
+      {
+        product_id: '1',
+        product_name: 'Piwo',
+        quantity: '5',
+        product_price: '10',
+        total: '50',
+        product_img: 'wibrator.png',
+        company_name: 'zipaa',
+      },
+      {
+        product_id: '2',
+        product_name: 'Ferarri',
+        quantity: '3',
+        product_price: '69',
+        total: '207',
+        product_img: 'jetson.jpg',
+        company_name: 'Samochodzy',
+      },
+    ],
   ]
 
   useEffect(() => {
-    // axios.get(`/getCart?u_id=${userID}`)
-    // getShoppingCart()
-    console.log(cartList)
-
-    let cartElements = cartList.map((e, i) => (
-      <div className='cart element' key={i}>
-        <CartElement data={e} />
-      </div>
-    ))
-
-    setCartList(cartElements)
+    let cartElements = cartLists.map((e, i) => <CartFromOneSeller key={i} data={e} />)
+    setFullCart(cartElements)
   }, [])
 
   return (
@@ -33,18 +63,7 @@ export default function ShoppingCart() {
       <br />
       <div className='cart lane'></div>
       <h1 className='cart header'>Twój Koszyk</h1>
-      <div className='cart itemsWrapper'>{cartListDyn}</div>
-      <div className='cart payment'>
-        <select name='shipment'>
-          <option value='0'>Wybierz sposób dostawy...</option>
-          <option value='kurier'>Kurier</option>
-          <option value='osobisty'>Odbiór osobisty</option>
-          <option value='paczkomat'>Paczkomat</option>
-        </select>
-        <a href='#' className='cart buyButton'>
-          Kup teraz
-        </a>
-      </div>
+      <div className='cart sellerWrapper'>{fullCart}</div>
       <div className='cart lane' style={{ marginTop: '50px' }}></div>
       <h1 className='cart header'>Historia</h1>
     </div>
