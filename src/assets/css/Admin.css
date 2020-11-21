@@ -1,0 +1,61 @@
+body {
+  background-color: #fff;
+}
+
+.navbar {
+  text-decoration: none;
+  padding: 1.4em;
+  display: grid;
+  grid-template-columns: 16% auto;
+  grid-template-rows: auto;
+  grid-template-areas: 'logo orders general adding-product';
+  justify-items: center;
+  align-items: center;
+  outline-style: solid;
+  outline-width: 1px;
+}
+
+.logo {
+  grid-area: 'logo';
+  padding-right: 1.4em;
+}
+
+.orders {
+  grid-area: orders;
+}
+
+.general {
+  grid-area: general;
+}
+
+.adding-product {
+  grid-area: adding-product;
+}
+
+.animation {
+  transition: 0.7s;
+}
+.animation:hover {
+  transform: scale(1.1);
+}
+
+.navbar-text {
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #000;
+  color: #fff;
+  border-radius: 0.3em;
+  padding: 4%;
+}
+
+.form {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}

@@ -1,2 +1,5 @@
 export { default as App } from './App'
+export { default as AdminOrders } from './AdminOrders'
+export { default as AdminAddingItems } from './AdminAddingItems'
+export { default as Admin } from './Admin'
 export { default as Search } from './Search'

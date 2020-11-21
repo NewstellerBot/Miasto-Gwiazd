@@ -1,11 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
-import { App, Search } from './views'
-
+import { App, Search, Admin, AdminAddingItems, AdminOrders } from './views'
 import reportWebVitals from './reportWebVitals'
-
 import './assets/css/main.css'
 import './assets/css/reset.css'
 
@@ -21,6 +18,15 @@ ReactDOM.render(
         </Route>
         <Route path='/product/:id'>
           <Search />
+        </Route>
+        <Route path='/admin'>
+          <Admin />
+        </Route>
+        <Route path='/admin-adding-items'>
+          <AdminAddingItems />
+        </Route>
+        <Route path='/admin-orders'>
+          <AdminOrders />
         </Route>
       </Switch>
     </Router>

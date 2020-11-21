@@ -1,9 +1,9 @@
 import React from 'react'
 import '../assets/css/Admin.css'
-import { NavLink, Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import homeLogo from '../images/home-logo.png'
 
-export default function Admin() {
+export default function AdminOrders() {
   return (
     <>
       <div className='navbar'>
@@ -12,16 +12,14 @@ export default function Admin() {
         </Link>
         <NavLink
           className='navbar-text animation'
-          to='/admin-orders'
           activeStyle={{ backgroundColor: '#000', padding: '4%', color: '#fff' }}
         >
           <div className='orders'>Zamówienia</div>
         </NavLink>
-        <NavLink className='navbar-text animation' to='/admin'>
+        <NavLink className='navbar-text animation'>
           <div className='general'>Ogólne</div>
         </NavLink>
-
-        <NavLink className='navbar-text animation' to='/admin-adding-items'>
+        <NavLink className='navbar-text animation active'>
           <div className='adding-items'>Dodaj produkt</div>
         </NavLink>
       </div>
