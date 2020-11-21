@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  web:
+    image: nginx:1.17
+    ports:
+      - 80:80
+    depends_on:
+      - php
+
+  php:
+    image: php:7.2-fpm
+
+  react-app:
+    image: ykob/miasto-react
+    ports:
+      - 3000:3000
+    depends_on:
+      - php
+      - web
