@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom'
 import './assets/css/Searchbar.css'
 // import Searchbar from './components/Searchbar'
 import reportWebVitals from './reportWebVitals'
-import NavbarSearch from './components/NavbarSearch'
+// import NavbarSearch from './components/NavbarSearch'
+import ProductPage from './views/Product'
 
 ReactDOM.render(
 	<React.StrictMode>
-		<NavbarSearch />
+		<ProductPage pid='1234' />
 	</React.StrictMode>,
 	document.getElementById('root')
 )
