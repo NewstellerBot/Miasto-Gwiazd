@@ -26,12 +26,29 @@ function Searchbar() {
 
 	return (
 		<div>
-			<form role='search'>
-				<label htmlFor='search'>Search for anything...</label>
-				<input id='search' type='search' autoFocus placeholder='Search...' onChange={onChange} autoComplete='off' />
-				<input id='autocomplete' type='search' placeholder={autocomplete} autoFocus autoComplete='off' />
-				<button type='submit'>
-					<img style={{ height: '50%', marginTop: '10%' }} src={searchIcon} />
+			<form role='searchbar' className='searchbar'>
+				<label htmlFor='search' className='searchbar'>
+					Search for anything...
+				</label>
+				<input
+					id='search'
+					type='searchbar'
+					autoFocus
+					placeholder='Search...'
+					onChange={onChange}
+					autoComplete='off'
+					className='searchbar'
+				/>
+				<input
+					id='autocomplete'
+					type='searchbar'
+					placeholder={autocomplete}
+					autoFocus
+					autoComplete='off'
+					className='searchbar'
+				/>
+				<button type='submit' className='searchbar'>
+					<img className='searchbar' style={{ height: '50%', marginTop: '10%' }} src={searchIcon} />
 				</button>
 			</form>
 		</div>

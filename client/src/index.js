@@ -1,12 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './assets/css/Searchbar.css'
-import Searchbar from './components/Searchbar'
+// import Searchbar from './components/Searchbar'
 import reportWebVitals from './reportWebVitals'
+import NavbarSearch from './components/NavbarSearch'
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Searchbar />
+		<NavbarSearch />
 	</React.StrictMode>,
 	document.getElementById('root')
 )
