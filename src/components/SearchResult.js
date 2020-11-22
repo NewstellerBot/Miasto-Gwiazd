@@ -21,7 +21,7 @@ export default function SearchResult(props) {
 }
 
 SearchResult.propTypes = {
-  productID: PropTypes.number,
+  productId: PropTypes.number,
   image: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.number,
