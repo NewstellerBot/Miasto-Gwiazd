@@ -14,7 +14,6 @@
     "react-login-modal-sm": "^1.0.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
-    "simple-line-icons": "^2.5.5",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

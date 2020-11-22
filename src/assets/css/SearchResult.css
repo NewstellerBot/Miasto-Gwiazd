@@ -39,3 +39,15 @@
   font-size: 1.5rem;
   color: #ff8000;
 }
+
+.add-cart {
+  position: absolute;
+}
+
+.add-cart svg {
+  margin: 10px;
+}
+
+.add-cart:hover {
+  color: #ff8000;
+}

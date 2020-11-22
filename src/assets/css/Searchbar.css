@@ -51,8 +51,14 @@
   border-radius: 0 1rem 1rem 0;
 }
 
+.search-green {
+  position: static;
+  margin-top: 20px;
+}
+
 .search-green .searchbar {
   background-color: #57bd84;
+  color: #fff;
 }
 
 .search-green .searchbar button {

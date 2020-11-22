@@ -19,10 +19,17 @@ function Navbar() {
         <Searchbar className='navbar-search' />
 
         <div className='navbar-navigation'>
-          <Link to='/login' className='navbar-item navbar-login'>
-            <FontAwesomeIcon icon='user' className='navbar-icon' />
-            Zaloguj się
-          </Link>
+          {sessionStorage.getItem('id') ? (
+            <Link to='/account' className='navbar-item navbar-login'>
+              <FontAwesomeIcon icon='user' className='navbar-icon' />
+              Moje Konto
+            </Link>
+          ) : (
+            <Link to='/login' className='navbar-item navbar-login'>
+              <FontAwesomeIcon icon='user' className='navbar-icon' />
+              Zaloguj się
+            </Link>
+          )}
           <Link to='/favourites' className='navbar-item navbar-wishlist'>
             <FontAwesomeIcon icon='heart' className='navbar-icon' />
             Ulubione
