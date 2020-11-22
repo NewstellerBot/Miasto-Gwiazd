@@ -10,13 +10,9 @@ export default function Admin() {
         <Link to='/'>
           <img src={homeLogo} alt='Logo' />
         </Link>
-        <NavLink
-          className='navbar-text animation'
-          to='/admin-orders'
-          activeStyle={{ backgroundColor: '#000', padding: '4%', color: '#fff' }}
-        >
-          <div className='orders'>Zamówienia</div>
-        </NavLink>
+
+        <div className='orders navbar-text animation'>Zamówienia</div>
+
         <NavLink className='navbar-text animation' to='/admin'>
           <div className='general'>Ogólne</div>
         </NavLink>

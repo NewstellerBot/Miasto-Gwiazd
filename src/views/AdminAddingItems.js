@@ -11,12 +11,7 @@ export default function AdminAddingItems() {
         <Link to='/'>
           <img src={homeLogo} alt='Logo' />
         </Link>
-        <NavLink className='navbar-text animation' to='/admin-orders'>
-          <div className='orders'>Zamówienia</div>
-        </NavLink>
-        <NavLink className='navbar-text animation' to='/admin'>
-          <div className='general'>Ogólne</div>
-        </NavLink>
+        <div className='general navbar-text animation'>Ogólne</div>
         <NavLink
           className='navbar-text animation active'
           to='/admin-adding-items'
