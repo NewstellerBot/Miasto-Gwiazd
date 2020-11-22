@@ -1,5 +1,5 @@
 export { default as SearchResult } from './SearchResult'
-export { default as LoginForm } from './LoginForm'
+export { default as LoginPage } from './LoginPage'
 export { default as Searchbar } from './Searchbar'
 export { default as Navbar } from './Navbar'
 export { default as Tile } from './Tile'

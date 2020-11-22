@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronRight, faHeart, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons'
 
-import { App, Login, Search, Cart, ShopPage } from './views'
+import { App, Login, Search, Cart, ShopPage, MyAccount } from './views'
 import reportWebVitals from './reportWebVitals'
 
 import './assets/css/main.css'
@@ -22,6 +22,9 @@ ReactDOM.render(
         </Route>
         <Route exact path='/login'>
           <Login />
+        </Route>
+        <Route exact path='/account'>
+          <MyAccount />
         </Route>
         <Route path='/search/:query'>
           <Search />

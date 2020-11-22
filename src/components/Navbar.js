@@ -17,12 +17,18 @@ function Navbar() {
         </Link>
 
         <Searchbar className='navbar-search' />
-
         <div className='navbar-navigation'>
-          <Link to='/login' className='navbar-item navbar-login'>
-            <FontAwesomeIcon icon='user' className='navbar-icon' />
-            Zaloguj się
-          </Link>
+          {sessionStorage.getItem('userId') ? (
+            <Link to='/account' className='navbar-item navbar-login'>
+              <FontAwesomeIcon icon='user' className='navbar-icon' />
+              Moje konto
+            </Link>
+          ) : (
+            <Link to='/login' className='navbar-item navbar-login'>
+              <FontAwesomeIcon icon='user' className='navbar-icon' />
+              Zaloguj się
+            </Link>
+          )}
           <Link to='/favourites' className='navbar-item navbar-wishlist'>
             <FontAwesomeIcon icon='heart' className='navbar-icon' />
             Ulubione

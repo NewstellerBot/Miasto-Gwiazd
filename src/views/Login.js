@@ -1,11 +1,11 @@
 import React from 'react'
-import { Navbar, LoginForm } from '../components'
+import { Navbar, LoginPage } from '../components'
 
 function Home() {
   return (
     <>
       <Navbar />
-      <LoginForm />
+      <LoginPage />
     </>
   )
 }
