@@ -1,72 +1,46 @@
 import React from 'react'
 import axios from 'axios'
-import { useState } from 'react'
-import { useEffect } from 'react'
+
+import { CartElement, Navbar, Searchbar } from '../components'
 
 import '../assets/css/ShoppingCart.css'
-import CartFromOneSeller from '../components/ShoppingCartFromOneSeller'
 
 export default function ShoppingCart() {
-  const [fullCart, setFullCart] = useState()
+  let cartLists = []
 
-  var cartLists = [
-    [
-      {
-        product_id: '1',
-        product_name: 'Piwo',
-        quantity: '5',
-        product_price: '10',
-        total: '50',
-        product_img: 'wibrator.png',
-        company_name: 'zipaa',
-      },
-      {
-        product_id: '2',
-        product_name: 'Ferarri',
-        quantity: '3',
-        product_price: '69',
-        total: '207',
-        product_img: 'jetson.jpg',
-        company_name: 'zipaa',
-      },
-    ],
-    [
-      {
-        product_id: '1',
-        product_name: 'Piwo',
-        quantity: '5',
-        product_price: '10',
-        total: '50',
-        product_img: 'wibrator.png',
-        company_name: 'Samochodzy',
-      },
-      {
-        product_id: '2',
-        product_name: 'Ferarri',
-        quantity: '3',
-        product_price: '69',
-        total: '207',
-        product_img: 'jetson.jpg',
-        company_name: 'Samochodzy',
-      },
-    ],
-  ]
+  let cartContents = JSON.parse(sessionStorage.getItem('cart'))
 
-  useEffect(() => {
-    let cartElements = cartLists.map((e, i) => <CartFromOneSeller key={i} data={e} />)
-    setFullCart(cartElements)
-  }, [])
+  console.log(cartContents)
+
+  for (const id in cartContents) {
+    if (cartContents.hasOwnProperty(id)) {
+      axios.get(`https://stargard.festiwalczacki.pl/backend/search_results.php?id=${id}`).then(res => {
+        cartLists = [...cartLists, { ...res.data[0], quantity: cartContents[id] }]
+        console.log(res.data, cartLists)
+      })
+    }
+  }
 
   return (
-    <div className='cart'>
-      <br />
-      <br />
-      <div className='cart lane'></div>
-      <h1 className='cart header'>Twój Koszyk</h1>
-      <div className='cart sellerWrapper'>{fullCart}</div>
-      <div className='cart lane' style={{ marginTop: '50px' }}></div>
-      <h1 className='cart header'>Historia</h1>
-    </div>
+    <>
+      <Navbar />
+      <div className='cart'>
+        {cartLists ? (
+          <div className='results'>
+            <div className='center-text'>
+              <h1>Twój Koszyk:</h1>
+            </div>
+            {console.log(cartLists)}
+          </div>
+        ) : (
+          <div className='no-results'>
+            <h1>Nie masz nic w koszyku.</h1>
+            <p>Dodaj coś!</p>
+            <Searchbar className='splash-search search-green' />
+          </div>
+        )}
+      </div>
+    </>
   )
 }
 

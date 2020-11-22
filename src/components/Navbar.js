@@ -18,10 +18,10 @@ function Navbar() {
 
         <Searchbar className='navbar-search' />
         <div className='navbar-navigation'>
-          {sessionStorage.getItem('userId') ? (
+          {sessionStorage.getItem('id') ? (
             <Link to='/account' className='navbar-item navbar-login'>
               <FontAwesomeIcon icon='user' className='navbar-icon' />
-              Moje konto
+              Moje Konto
             </Link>
           ) : (
             <Link to='/login' className='navbar-item navbar-login'>
