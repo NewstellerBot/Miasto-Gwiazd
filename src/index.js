@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import { App, Search } from './views'
+import { App, Search, ShopPage } from './views'
 
 import reportWebVitals from './reportWebVitals'
 
@@ -21,6 +21,9 @@ ReactDOM.render(
         </Route>
         <Route path='/product/:id'>
           <Search />
+        </Route>
+        <Route exact path='/company/:id'>
+          <ShopPage />
         </Route>
       </Switch>
     </Router>
