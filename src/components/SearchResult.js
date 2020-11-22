@@ -6,8 +6,10 @@ import { Link } from 'react-router-dom'
 
 export default function SearchResult(props) {
   return (
-    <Link to={`/product/${props.productID}`} className='search-result'>
-      <img className='result-image' src={props.image} alt='' />
+    <Link to={`/product/${props.productId}`} className='search-result'>
+      <div className='result-image'>
+        <img src={`https://stargard.festiwalczacki.pl/assets/uploads/img/${props.image}`} alt='' />
+      </div>
       <div className='result-data'>
         <div className='result-name'>{props.name}</div>
         <div className='result-price'>{`${(props.price / 100).toFixed(2)} zł`}</div>

@@ -10,7 +10,7 @@ export default function SearchBar(props) {
   const history = useHistory()
 
   return (
-    <div className='searchbar-container'>
+    <div className={`${props.className} searchbar-container`}>
       <div className='searchbar'>
         <input
           className='searchbar-input'

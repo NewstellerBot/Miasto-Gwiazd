@@ -2,15 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faHeart, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons'
 
-import { App, Home, Login, Search } from './views'
+import { App, Login, Search } from './views'
 import reportWebVitals from './reportWebVitals'
 
 import './assets/css/main.css'
 import './assets/css/reset.css'
 
-library.add(faChevronRight)
+library.add(faChevronRight, faUser, faShoppingCart, faHeart)
 console.log(library)
 
 ReactDOM.render(
@@ -19,9 +19,6 @@ ReactDOM.render(
       <Switch>
         <Route exact path='/'>
           <App />
-        </Route>
-        <Route exact path='/home'>
-          <Home />
         </Route>
         <Route exact path='/login'>
           <Login />

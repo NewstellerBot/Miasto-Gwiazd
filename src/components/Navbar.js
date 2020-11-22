@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import LineIcon from 'react-lineicons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { Searchbar } from '.'
 
 import homeLogo from '../assets/img/home-logo.png'
 
@@ -8,32 +10,28 @@ import '../assets/css/Navbar.css'
 
 function Navbar() {
   return (
-    <div className='navbar'>
-      <Link to='/home' className='navbar-home'>
-        <img src={homeLogo} alt='Logo' />
-      </Link>
+    <div className='navbar-wrapper'>
+      <div className='navbar'>
+        <Link to='/' className='navbar-home'>
+          <img src={homeLogo} alt='Logo' />
+        </Link>
 
-      <div className='navbar-search'>
-        <div className='navbar-search-text'>
-          <input type='text' placeholder='Search anything...' />
-          <div className='navbar-search-lane'></div>
+        <Searchbar className='navbar-search' />
+
+        <div className='navbar-navigation'>
+          <Link to='/login' className='navbar-item navbar-login'>
+            <FontAwesomeIcon icon='user' className='navbar-icon' />
+            Zaloguj się
+          </Link>
+          <Link to='/favourites' className='navbar-item navbar-wishlist'>
+            <FontAwesomeIcon icon='heart' className='navbar-icon' />
+            Ulubione
+          </Link>
+          <Link to='/cart' className='navbar-item navbar-cart'>
+            <FontAwesomeIcon icon='shopping-cart' className='navbar-icon' />
+            Koszyk
+          </Link>
         </div>
-        <LineIcon name='search-alt' />
-      </div>
-
-      <div className='navbar-navigation'>
-        <Link to='/login' className='navbar-item navbar-login'>
-          <LineIcon name='user' />
-          Zaloguj się
-        </Link>
-        <Link to='/favourites' className='navbar-item navbar-wishlist'>
-          <LineIcon name='heart' />
-          Ulubione
-        </Link>
-        <Link to='/cart' className='navbar-item navbar-cart'>
-          <LineIcon name='shopping-basket' />
-          Koszyk
-        </Link>
       </div>
     </div>
   )

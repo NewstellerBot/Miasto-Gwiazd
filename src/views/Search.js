@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-import { SearchResult, Navbar } from '../components'
+import { SearchResult, Navbar, Searchbar } from '../components'
+
+import '../assets/css/Search.css'
 
 export default function Search(props) {
   const [results, setResults] = useState([])
@@ -21,6 +23,9 @@ export default function Search(props) {
       <Navbar />
       {results ? (
         <div className='results'>
+          <div className='center-text'>
+            <h1>Wyniki dla "{query}":</h1>
+          </div>
           {results.map(res => (
             <SearchResult
               key={res.product_id}
@@ -34,7 +39,11 @@ export default function Search(props) {
           ))}
         </div>
       ) : (
-        <div className='no-results' />
+        <div className='no-results'>
+          <h1>Niestety, nie znaleźliśmy "{query}".</h1>
+          <p>Spróbuj wpisać to inaczej.</p>
+          <Searchbar className='splash-search search-green' />
+        </div>
       )}
     </>
   )

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import '../assets/css/LoginForm.css'
-import LineIcon from 'react-lineicons'
 import { Link, useHistory } from 'react-router-dom'
 
 function LoginForm() {
@@ -10,9 +9,7 @@ function LoginForm() {
 
   return (
     <div className='login-form'>
-      <div onClick={() => history.goBack()} className='login-form-close'>
-        <LineIcon name='close' />
-      </div>
+      <div onClick={() => history.goBack()} className='login-form-close'></div>
       <form
         onSubmit={() => {
           localStorage.setItem('email', email)

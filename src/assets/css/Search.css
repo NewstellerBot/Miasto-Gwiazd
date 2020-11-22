@@ -1,0 +1,22 @@
+.results h1 {
+  color: #fb8c00;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-results {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-results h1 {
+  color: #fb8c00;
+  margin-top: 30vh;
+}
