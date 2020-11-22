@@ -9,9 +9,7 @@ import '../assets/css/ShopPage.css'
 export default function ShopPage() {
   const [results, setResults] = useState([])
   const { id } = useParams()
-
   console.log(id)
-
   useEffect(() => {
     axios.get(`https://stargard.festiwalczacki.pl/backend/get_shop.php?id=${id}`).then(res => {
       setResults(res.data)
