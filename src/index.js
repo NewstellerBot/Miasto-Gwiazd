@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronRight, faHeart, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons'
 
-import { App, Login, Search } from './views'
+import { App, Login, Search, Cart } from './views'
 import reportWebVitals from './reportWebVitals'
 
 import './assets/css/main.css'
@@ -25,6 +25,12 @@ ReactDOM.render(
         </Route>
         <Route path='/search/:query'>
           <Search />
+        </Route>
+        <Route path='/search/:query'>
+          <Search />
+        </Route>
+        <Route path='/cart/:uid'>
+          <Cart />
         </Route>
       </Switch>
     </Router>

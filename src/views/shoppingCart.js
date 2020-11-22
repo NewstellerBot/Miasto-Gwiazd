@@ -69,3 +69,5 @@ export default function ShoppingCart() {
     </div>
   )
 }
+
+//TODO query to get products
