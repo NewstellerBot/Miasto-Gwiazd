@@ -29,7 +29,7 @@ ReactDOM.render(
         <Route path='/search/:query'>
           <Search />
         </Route>
-        <Route path='/cart/:uid'>
+        <Route path='/cart'>
           <Cart />
         </Route>
         <Route exact path='/company/:id'>

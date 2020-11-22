@@ -1,0 +1,17 @@
+.shopWrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+.shopWrapper > .shopDesc {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.shopWrapper > .shopDesc > h2 {
+  color: black;
+  font-size: 40px;
+}
